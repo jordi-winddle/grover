@@ -87,7 +87,7 @@ class Grover
       if status == 'ok'
         message
       elsif error_class.nil?
-        raise Grover::JavaScript::UnknownError, message
+        raise Grover::JavaScript::UnknownError, input
       else
         raise Grover::JavaScript.const_get(error_class, false), message
       end
